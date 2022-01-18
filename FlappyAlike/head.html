@@ -36,7 +36,7 @@ Game
             function KeyboardEventHandler(event) {
                 //↑
                 if (event.keyCode == keycode.SPACE){
-                bird.move();
+                acceleraton.VThrust(1);
                 console.log("hell")
                 }
                 
@@ -53,7 +53,7 @@ Game
                 
                //draws jet
                 bird.draw(context);
-
+                bird.move();
                 //acceleration
                 bird.accelerate(acceleraton);
                 //get the next animation frame
