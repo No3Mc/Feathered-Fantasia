@@ -105,9 +105,7 @@ function flap() {
         y =- 20;
     }
     //public method to set the vector of the Mainspr
-    flap.prototype.accelerate = function (Acceleration) {
-        //set vx
-    }
+
 
  
     
@@ -115,7 +113,7 @@ function flap() {
 
 
     //create a public property called Top
-    Object.defineProperty(this, 'Top',
+    Object.defineProperty(this, 'Space',
         {
             //getter
             get: function () {
