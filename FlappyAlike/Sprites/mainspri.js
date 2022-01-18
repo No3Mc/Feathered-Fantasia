@@ -114,4 +114,60 @@ function flap() {
 
 
     }
+
+    flap.prototype.move = function () {
+        // change the x axis by the x velocity
+        x += vx;
+        //change the y axis by the y velocity
+        y += vy;
+
+
+    }
+    //public method to set the vector of the Mainspr
+    flap.prototype.accelerate = function (Acceleration) {
+        //set vx
+        vx += Acceleration.AX;
+        //set vy
+        vy += Acceleration.AY;
+
+
+    }
+
+ 
+    
+    
+
+
+    //create a public property called Top
+    Object.defineProperty(this, 'Top',
+        {
+            //getter
+            get: function () {
+                //return the value of y less height
+                return y - updwon;
+            }
+        }
+    )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
