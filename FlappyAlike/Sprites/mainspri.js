@@ -6,21 +6,7 @@ function flap() {
     var x = 0,
         y = 0
 
-    //create a public property called X (note caps!)
-    Object.defineProperty(this, 'X',
-        {
-            //getter function
-            get: function () {
-                //return the value of x (lower case)
-                return x;
-            },
-            //setter
-            set: function (value) {
-                //set the value of x (lower case)
-                x = value;
-            }
-        }
-    )
+
     
     ////sprite movement class
     ////create the public move method by adding it to the classes prototype
@@ -116,21 +102,11 @@ function flap() {
     }
 
     flap.prototype.move = function () {
-        // change the x axis by the x velocity
-        x += vx;
-        //change the y axis by the y velocity
-        y += vy;
-
-
+        x++
     }
     //public method to set the vector of the Mainspr
     flap.prototype.accelerate = function (Acceleration) {
         //set vx
-        vx += Acceleration.AX;
-        //set vy
-        vy += Acceleration.AY;
-
-
     }
 
  
