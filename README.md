@@ -19,7 +19,7 @@ Sprite design 25%<br>
 - [ ] Appropriate motion<br>
 - [ ] Internal sprite animation<br>
 
-✅JavaScript Code 25%<br> 
+JavaScript Code 25%<br> 
 **Requirements**<br>
 - [ ] Comments<br>
 - [ ] Code readability <br>
