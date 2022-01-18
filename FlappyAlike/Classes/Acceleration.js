@@ -8,20 +8,20 @@
 
     //public read only property for AX
     Object.defineProperty(this, 'AX',
-        {
-            get: function () {
-                return ax;
-            }
-        })
+    {
+        get: function () {
+            return ax;
+        }
+    })
 
     //public read only property for AY
     Object.defineProperty(this, 'AY',
-        {
-            get: function () {
-                //return the acceleration on the y axis + gravity
-                return ay + gravity;
-            }
-        })
+    {
+        get: function () {
+            //return the acceleration on the y axis + gravity
+            return ay + gravity;
+        }
+    })
 
     //public method for vertical thrust
     Accelerate.prototype.VThrust = function (Thrust) {
@@ -35,8 +35,8 @@
 
     //public method to halt all accelaretaion
     Accelerate.prototype.Halt = function () {
-        ay = .1;//up, down
-        ax = 0;//right, left
+        ay = 0;
+        ax = 0;
     }
 
 }
