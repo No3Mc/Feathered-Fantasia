@@ -9,7 +9,7 @@ function Square() {
     //create a public property called X (note caps!)
     Object.defineProperty(this, 'X',
         {
-            //getter function
+            //getter functions
             get: function () {
                 //return the value of x (lower case)
                 return x;
