@@ -10,7 +10,7 @@
     Object.defineProperty(this, 'AX',
     {
         get: function () {
-            return ax;
+            return ax = gravity;
         }
     })
 
