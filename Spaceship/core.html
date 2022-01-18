@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>
+
+
+       Flappy_Bird
+
+    </title>
+
+    <link rel="stylesheet" href="corestyle.css" />
+</head>
+<body>
+    <canvas id="canvas" width="1500" height="1000"></canvas>
+    <script src="Sprites/square.js"></script>
+    <script src="classes/keycode.js"></script>
+    <script src="classes/vector.js"></script>
+    <script src="classes/acceleration.js"></script>
+    <script>
+        //this function will always be executed when the page loads
+        window.onload = function () {
+
+
+            //our code here
+            var canvas = document.getElementById('canvas'),
+                //access the 2D drawing API
+                context = canvas.getContext('2d'),
+                //var for x coordinate of the square
+                x = 0,
+                //var for y coordinate of the square
+                y = 0,
+
+                //new instance of the Square
+                square = new Square();
+            //create a new acceleration object
+            acceleraton = new Accelerate(.001);
+
+
+            //function to handle keyboard events
+            function KeyboardEventHandler(event) {
+                //if the up arrow is pressed
+                if (event.keyCode == keycode.SPACE) {
+                    //activate the thrusters
+                    acceleraton.HThrust(.01);
+                }
+            //add a listener for the keydown event
+            window.addEventListener('keydown', KeyboardEventHandler, false);
+
+
+
+
+            //need to comment out drawframe because it can now run automatically as page loads up
+            //drawFrame();
+            (function drawFrame() {
+
+                //new drawframe code
+                //clear the canvas for the new frame
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                //draw the sprite
+                square.draw(context);
+                //move the square to the right
+                square.move();
+                //apply the acceleration to the ship
+                square.accelerate(acceleration);
+                //get the next animation frame
+                window.requestAnimationFrame(drawFrame);
+
+            })();
+
+        }
+    </script>
+</body>
+</html>
