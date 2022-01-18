@@ -35,9 +35,8 @@
 
     //public method to halt all accelaretaion
     Accelerate.prototype.Halt = function () {
-        ay = 0;
-        ax = 0;
+        ay = .1;//up, down
+        ax = 0;//right, left
     }
 
 }
-
