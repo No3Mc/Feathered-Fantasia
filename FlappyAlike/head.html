@@ -34,36 +34,10 @@
             //function to handle keyboard events
             function KeyboardEventHandler(event) {
                 //↑
-                if (event.keyCode == keycode.UP) {
+                if (event.keyCode == keycode.SPACE) {
                     acceleraton.VThrust(.1);
                 }
-                //←
-                if (event.keyCode == keycode.LEFT) {
-                    acceleraton.HThrust(.1);
-                }
-                //→
-                if (event.keyCode == keycode.RIGHT) {
-                    acceleraton.HThrust(-.1);
-                }
-                //↓
-                if (event.keyCode == keycode.DOWN) {
-                    acceleraton.Halt();
-                }
-                if (event.keyCode == keycode.W) {
-                    acceleraton.VThrust(.1);
-                }
-                //←
-                if (event.keyCode == keycode.A) {
-                    acceleraton.HThrust(.1);
-                }
-                //→
-                if (event.keyCode == keycode.D) {
-                    acceleraton.HThrust(-.1);
-                }
-                //↓
-                if (event.keyCode == keycode.S) {
-                    acceleraton.Halt();
-                }
+
                 
             }
 
