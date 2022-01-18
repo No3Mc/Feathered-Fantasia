@@ -4,8 +4,8 @@ function flap() {
     //initialisation code will go here
     //create private variables for the x and y coordinates
     var x = 0,
-        y = 0
-
+        y = 0,
+        vy = 0;
 
     
     ////sprite movement class
@@ -102,12 +102,12 @@ function flap() {
     }
 
     flap.prototype.move = function () {
-        y =- 20;
+        y =- vy;
     }
     //public method to set the vector of the Mainspr
     flap.prototype.accelerate = function (Acceleration) {
         //set vx
-        
+        vy += Acceleration.AY;
     }
 
  
