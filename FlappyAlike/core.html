@@ -64,7 +64,6 @@
                 if (event.keyCode == keycode.S) {
                     acceleraton.Halt();
                 }
-
                 
             }
 
@@ -72,9 +71,6 @@
             window.addEventListener('keydown', KeyboardEventHandler, false);
             // window.addEventListener('keyup', KeyboardEventHandler, false);
             //need to add the sty.js 
-            
-
-
 
             (function drawFrame() {
                 
@@ -82,11 +78,8 @@
                 bird.draw(context);
                 //draws enemy 1
 
-
-
                 //move the Mainspr
                 bird.move();
-
 
                 //acceleration
                 bird.accelerate(acceleraton);
