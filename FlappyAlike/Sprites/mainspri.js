@@ -11,11 +11,7 @@ function flap() {
     
     ////sprite movement class
     ////create the public move method by adding it to the classes prototype
-    flap.prototype.move = function () {
-        //change the value of the x axis for the shape
-        y++;
-    
-    }
+
     //create the draw function to give us the draw method
     //it accepts one parameter which is the context from the canvas it is drawn on
     flap.prototype.draw = function (context) {
@@ -105,9 +101,11 @@ function flap() {
     flap.prototype.move = function ()
     {
         //change the x axis by the x velocity
+
+        y += vy;
         x += vx;
         //change the y axis by the y velocity
-        y += vy;
+        
     }
     //public method to set the vector of the Mainspr
     flap.prototype.accelerate = function (Acceleration) {
@@ -115,6 +113,7 @@ function flap() {
         vx += Acceleration.AX;
         //set vy
         vy += Acceleration.AY;
+        
     }
 
 
