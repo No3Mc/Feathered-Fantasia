@@ -102,7 +102,7 @@ function flap() {
     }
 
     flap.prototype.move = function () {
-        x++
+        y =- 20;
     }
     //public method to set the vector of the Mainspr
     flap.prototype.accelerate = function (Acceleration) {
