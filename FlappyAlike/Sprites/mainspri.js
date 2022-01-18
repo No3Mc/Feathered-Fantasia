@@ -1,5 +1,5 @@
-﻿//create the constructor for the class square
-function Square() {
+﻿//create the constructor for the class flap
+function flap() {
 
     //initialisation code will go here
     //create private variables for the x and y coordinates
@@ -24,14 +24,14 @@ function Square() {
     
     ////sprite movement class
     ////create the public move method by adding it to the classes prototype
-    Square.prototype.move = function () {
+    flap.prototype.move = function () {
         //change the value of the x axis for the shape
         y++;
     
     }
     //create the draw function to give us the draw method
     //it accepts one parameter which is the context from the canvas it is drawn on
-    Square.prototype.draw = function (context) {
+    flap.prototype.draw = function (context) {
 
         //save the state of the drawing context before we change it
         context.save();
