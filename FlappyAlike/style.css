@@ -1,4 +1,10 @@
 ﻿body {
+
+    width: 99.3%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
     background-color: rgb(176,176,176);
     background-color: black
 }
