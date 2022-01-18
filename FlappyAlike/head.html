@@ -27,7 +27,7 @@ Game
                 //new instance of the Mainspr class
                 bird = new flap(),
                 //create a new acceleration object
-                acceleraton = new Accelerate(1);
+                acceleraton = new Accelerate(.01);
 
             
 
@@ -36,7 +36,7 @@ Game
             function KeyboardEventHandler(event) {
                 //↑
                 if (event.keyCode == keycode.SPACE){
-                acceleraton.VThrust(1);
+                acceleraton.VThrust(.1);
                 
                 console.log("hell")
                 }
