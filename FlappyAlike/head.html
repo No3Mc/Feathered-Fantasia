@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <title>
-    Sample Flappy alike
+Game
     </title>
     <link rel="stylesheet" href="style.css" />
 </head>
@@ -11,13 +11,10 @@
     <canvas id="canvas" width="2040" height="900"></canvas>
 
     <!-- main shooting sprite -->
-    <script src="Sprites/mainspri.js"></script>
-
-    <!-- main bg -->
+    <script src="Classes/Acceleration.js"></script>
     <script src="Classes/keycode.js"></script>
     <script src="Classes/vector.js"></script>
-    <script src="Classes/Acceleration.js"></script>
-
+    <script src="Sprites/mainspri.js"></script>
 
     <script>
         //as pg loads
@@ -26,37 +23,64 @@
             var canvas = document.getElementById('canvas'),
                 //access the 2D drawing API
                 context = canvas.getContext('2d'),
-                //new instance of the flap class
+                //new instance of the Mainspr class
                 bird = new flap(),
-                //create a new acceleration object, change the gravity by altering the 0
-                acceleraton = new Accelerate(0),
+                
+                //create a new acceleration object
+                acceleraton = new Accelerate(0);
+
+
+
 
             //function to handle keyboard events
             function KeyboardEventHandler(event) {
-                //jump
-                if (event.keyCode == keycode.SPACE) {
-                    acceleraton.VThrust(.1);
+                //↑
+                if (event.keyCode == keycode.SPACE){
+                bird.move();
+                console.log("hell")
                 }
+                
             }
 
             //listener for keydown event
             window.addEventListener('keydown', KeyboardEventHandler, false);
             // window.addEventListener('keyup', KeyboardEventHandler, false);
+            //need to add the sty.js 
+            
+
 
 
             (function drawFrame() {
+
+
+                context.clearRect(0, 0, canvas.width, canvas.height);
+                context.font = "bold 30px Helvetica, Arial, sans-serif";
+                context.fillText("Your Score!", 1750, 30);
                 
                //draws jet
                 bird.draw(context);
                 //draws enemy 1
 
+
+
                 //move the Mainspr
-                bird.move();
+
+
+
+
+
+
 
                 //acceleration
                 bird.accelerate(acceleraton);
                 //get the next animation frame
                 window.requestAnimationFrame(drawFrame);
+
+
+
+
+
+
 
             })();
         }
