@@ -77,59 +77,26 @@
 
 
             (function drawFrame() {
-
-
-                context.clearRect(0, 0, canvas.width, canvas.height);
-                context.font = "bold 30px Helvetica, Arial, sans-serif";
-                context.fillText("Your Score!", 1750, 30);
                 
                //draws jet
-                jet.draw(context);
+                bird.draw(context);
                 //draws enemy 1
-                enem.draw(context);
-                //draws enem 2
-                enem2.draw(context);
-                //draw bounds
-                b1.draw(context);
-                b2.draw(context);
-                b3.draw(context);
-                b4.draw(context);
-                //draws noz
-                nox.draw(context);
-                //draws bullets
-                bullet.draw(context);
+
 
 
                 //move the Mainspr
-                jet.move();
+                bird.move();
 
-
-
-
-                //moving enemy sprites
-                enem.move();
-                enem2.move();
 
                 //acceleration
-                jet.accelerate(acceleraton);
+                bird.accelerate(acceleraton);
                 //get the next animation frame
                 window.requestAnimationFrame(drawFrame);
 
 
 
 
-                //calculate the difference between the box x position and the arrow x position
-                var dx = jet.X - enem.X;
-                //calculate the difference between the box y position and the arrow y position
-                var dy = jet.Y - enem.Y;
-                //set the angle of rotation for the arrow
-                enem.Rotation = Math.atan2(dy, dx);
 
-                // if (collision.Overlapping(bullet, enem)) {
-                //     //halt the ship
-                //     alert("collision")
-                //     enem.halt()
-                // }
 
 
             })();
