@@ -26,28 +26,10 @@
             var canvas = document.getElementById('canvas'),
                 //access the 2D drawing API
                 context = canvas.getContext('2d'),
-                //new instance of the Mainspr class
-                jet = new Mainspr(),
-                //enemies objects
-                enem = new enemy(),
-                enem2 = new enemy2(),
-                //bullet objects
-                bullet = new bullets(),
-                //bound objects
-                b1 = new bound1(),
-                b2 = new bound2(),
-                b3 = new bound3(),
-                b4 = new bound4(),
-                // test = new Arrow(),
-                nox = new Boost(),
+                //new instance of the flap class
+                bird = new flap(),
                 //create a new acceleration object
                 acceleraton = new Accelerate(0),
-                //create a new instance of the collision detection class
-                collision = new Collision();
-
-                //test
-
-
 
             //function to handle keyboard events
             function KeyboardEventHandler(event) {
@@ -82,12 +64,7 @@
                 if (event.keyCode == keycode.S) {
                     acceleraton.Halt();
                 }
-                if (event.keyCode == keycode.SPACE){
 
-                bullet.move();
-
-                console.log("hell")
-                }
                 
             }
 
