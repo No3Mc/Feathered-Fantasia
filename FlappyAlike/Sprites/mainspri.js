@@ -144,7 +144,7 @@ function flap() {
             //getter
             get: function () {
                 //return the value of y less height
-                return y - updwon;
+                return y - 20;
             }
         }
     )
