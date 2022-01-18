@@ -103,6 +103,7 @@ function flap() {
 
     flap.prototype.move = function () {
         y =- vy;
+        
     }
     //public method to set the vector of the Mainspr
     flap.prototype.accelerate = function (Acceleration) {
@@ -111,7 +112,7 @@ function flap() {
     }
 
  
-    
+
     
 
 
