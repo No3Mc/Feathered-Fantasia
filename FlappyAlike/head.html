@@ -25,7 +25,6 @@ Game
                 context = canvas.getContext('2d'),
                 //new instance of the Mainspr class
                 bird = new flap(),
-                
                 //create a new acceleration object
                 acceleraton = new Accelerate(0);
 
@@ -44,14 +43,8 @@ Game
 
             //listener for keydown event
             window.addEventListener('keydown', KeyboardEventHandler, false);
-            // window.addEventListener('keyup', KeyboardEventHandler, false);
-            //need to add the sty.js 
-            
-
-
 
             (function drawFrame() {
-
 
                 context.clearRect(0, 0, canvas.width, canvas.height);
                 context.font = "bold 30px Helvetica, Arial, sans-serif";
@@ -59,24 +52,11 @@ Game
                 
                //draws jet
                 bird.draw(context);
-                //draws enemy 1
-
-
-
-                //move the Mainspr
-
-
-
-
-
-
 
                 //acceleration
                 bird.accelerate(acceleraton);
                 //get the next animation frame
                 window.requestAnimationFrame(drawFrame);
-
-
 
 
 
