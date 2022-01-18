@@ -116,7 +116,8 @@ function flap() {
         //set vy
         vy += Acceleration.AY;
     }
- 
+
+
 
     
 
