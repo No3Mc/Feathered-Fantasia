@@ -5,6 +5,7 @@ function flap() {
     //create private variables for the x and y coordinates
     var x = 0,
         y = 0,
+        vx = 0,
         vy = 0;
 
     
@@ -101,16 +102,20 @@ function flap() {
 
     }
 
-    flap.prototype.move = function () {
-        y =- vy;
-        
+    flap.prototype.move = function ()
+    {
+        //change the x axis by the x velocity
+        x += vx;
+        //change the y axis by the y velocity
+        y += vy;
     }
     //public method to set the vector of the Mainspr
     flap.prototype.accelerate = function (Acceleration) {
         //set vx
+        vx += Acceleration.AX;
+        //set vy
         vy += Acceleration.AY;
     }
-
  
 
     
